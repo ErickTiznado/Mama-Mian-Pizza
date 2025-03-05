@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pago</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pay.css">
+    <link rel="stylesheet" href="css/buycart.css">
+</head>
+<body>
+    <div class="navbar__container">
+        <nav class="navbar">
+            <!-- Encabezado del navbar con el nombre de la marca -->
+            <div class="navbar__header">
+                <h3>Mama Mian Pizza</h3>
+            </div>
+            <!-- Menú de navegación principal -->
+            <div class="navbar__menu__container">
+                <ul class="navbar__menu">
+                    <li class="navbar__items">Servicios</li>
+                    <li class="navbar__items">Pide Ahora!!</li>
+                    <li class="navbar__items">Sobre Nosotros</li>
+                </ul>
+            </div>
+            <!-- Botones de usuario y carrito -->
+            <div class="navbar__menu__buttons">
+                <!-- Botón de usuario con icono SVG -->
+                <button class="navbar__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                    </svg>
+                </button>
+                <!-- Botón del carrito con icono SVG -->
+                <button id="cart__button" class="navbar__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <main class="pay">
+        <div class="pay__process">
+            <div class="steps__container">
+                <div class="steps">
+                    <div class="step--active">
+                        1
+                    </div>
+                    <p>Cuenta</p>
+                </div>
+                <div class="steps">
+                    <div class="step--active">
+                        2
+                    </div>
+                    <p>Direccion y Pago</p>
+                </div>
+                <div class="steps">
+                    <div class="step--inactive">
+                        3
+                    </div>
+                    <p>    Confirmar</p>
+                </div>
+            </div>
+
+            <section class="account__step form__active">
+                <header class="account__header">
+                    <h3>¿Cómo quieres continuar con tu compra? <span><i class="fa-solid fa-pizza-slice"></i></span></h3>
+                    <p>Elije como quieres continuar</p>
+                </header>
+
+                <div class="account__options">
+                    <div class="account__option">
+                        <div class="buy__as__guest">
+                            <i class="fa-solid fa-user"></i>
+                            <h5>Como Invitado</h5>
+                            <p>Compra sin necesidad de registrarte</p>
+                        </div>
+                        <div class="buy__whit__account">
+                            <i class="fa-solid fa-user-check"></i>
+                            <h5>Con Cuenta</h5>
+                            <p>Guarda tu historial y agiliza compras futuras</p>
+                        </div>
+                    </div>
+
+                    <form class="guest__form" action="">
+                        <div class="guest__name">
+                            <div class="name">
+                                <label for="">Nombre</label>
+                            <input type="text" name="name" id="name" required>
+                            </div>
+                            <div class="name">
+                                <label for="">Apellido</label>
+                                <input type="text" name="lastname" id="lastname" required>            
+                            </div>
+                        </div>
+                        <label for="">Numero de Telefono</label>
+                        <input type="tel" name="phone" id="phone" required>
+                    </form>
+                </div>
+                
+                <div class="account__buttons">
+                    <button class="account__button">Volver</button>
+                    <button class="continue">Continuar</button>
+
+                </div>
+            </section>
+
+            <section class="pay__details">
+                <header class="pay__header">
+                    <h3>Detalles de Pago</h3>
+                    <p>Ingresa los datos de tu tarjeta</p>
+                </header>
+                <div class="pay__options">
+                    <div class="pay__option pay__option_active">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h5>Tarjeta de Credito</h5>
+                    </div>
+                    <div class="pay__option">
+                        <i class="fa-solid fa-wallet"></i>
+                        <h5>Paypal</h5>
+                    </div>
+                    <div class="pay__option">
+                        <i class="fa-solid fa-money-bill"></i>
+                        <h5>Efectivo</h5>
+                    </div>
+                </div>
+                <form class="pay__form" action="">
+                    <label for="">Nombre del Titular</label>
+                    <input type="text" name="cardname" id="cardname" required>
+                    <label for="">Numero de Tarjeta</label>
+                    <input type="text" name="cardnumber" id="cardnumber" required>
+                    <div class="card__details">
+                        <div class="card__date">
+                            <label for="">Fecha de Expiracion</label>
+                            <input type="text" name="carddate" id="carddate" required>
+                        </div>
+                        <div class="card__cvv">
+                            <label for="">CVV</label>
+                            <input type="text" name="cardcvv" id="cardcvv" required>
+                        </div>
+                    </div>
+                    </form>
+                    <div class="direccion__container">
+                        <header class="Direccion__header">
+                            <h3>Direccion de Envio</h3>
+                            <p>Ingresa la direccion de envio</p>
+                        </header>
+                            <form action="" class="address__form">
+                                <div class="address__details">
+                                    <div class="address__name">
+                                        <label for="">Direccion</label>
+                                        <input type="text" name="address" id="address" required>
+                                    </div>
+                                    <div class="address">
+                                        <label for="">Municipio</label>
+                                        <input type="text" name="city" id="city" required>
+                                    </div>
+                                </div>
+                                <div class="reference__point">
+                                    <label for="">Puntos de Referencia</label>
+                                    <input type="text" name="reference" id="reference" required>    
+                                </div>
+                            </form>
+                    </div>
+                    <div class="buttons__container">
+                        <button class="account__button">Volver</button>
+                        <button class="continue">Continuar</button>
+                        
+                    </div>
+            </section>
+            <section class="finish__pay">
+                <h1>Revisar y confirmar</h1>
+                <p>Revisa los detalles de tu pedido antes de confirmar</p>
+                <div class="personal__info">
+                    <h2>Informacion personal</h2>
+                </div>
+                <div class="direction__info">
+                    <h2>Direccion de entrega</h2>
+                    <p>El Salvador</p>
+                    <p>El Salvador</p>
+                    <p>El Salvador</p>
+                </div>
+
+                <div class="payment__info">
+                    <h2>Método de Pago</h2>
+                    <p>Tarjeta de Crédito o Débito</p>
+                </div>
+
+                <div class="button__container">
+                    <button class="account__button">Volver</button>
+                    <button class="continue">Confirmar</button>
+                    
+                </div>
+            </section>
+        </div>
+        <div class="order_details">
+        <header>
+            <h1>Resumen de la orden</h1>
+        </header>
+        <div class="buycart__content">
+            <div class="buycart__items">
+                <img src="img/product.png" alt="">
+                <div  class="buycart__description">
+                    <h3>Burrata</h3>
+                    <p>
+                        Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico
+                    </p>
+                    <div class="add">
+                        <button><i class="fa-solid fa-plus"></i></button>
+                        <span>1</span>
+                        <button><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="buycart__adm">
+                    <p>$5.00</p>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="buycart__items">
+                <img src="img/product.png" alt="">
+                <div class="buycart__description">
+                    <h3>Burrata</h3>
+                    <p>
+                        Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico
+                    </p>
+                    <div class="add">
+                        <button><i class="fa-solid fa-plus"></i></button>
+                        <span>1</span>
+                        <button><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="buycart__adm">
+                    <p>$5.00</p>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+            <div class="buycart__price">
+                <h3>Total</h3>
+                <p>$10.00</p>
+            </div>
+        </div>
+        
+    </div>
+    </main>
+    <script src="https://kit.fontawesome.com/b57616fca1.js" crossorigin="anonymous"></script>
+    <script src="js/steps.js"></script>
+</body>
+</html>

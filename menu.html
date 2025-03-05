@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/buycart.css">
+</head>
+<body>
+    <div class="navbar__container">
+        <nav class="navbar">
+            <!-- Encabezado del navbar con el nombre de la marca -->
+            <div class="navbar__header">
+                <h3>Mama Mian Pizza</h3>
+            </div>
+            <!-- Menú de navegación principal -->
+            <div class="navbar__menu__container">
+                <ul class="navbar__menu">
+                    <li class="navbar__items">Servicios</li>
+                    <li class="navbar__items">Pide Ahora!!</li>
+                    <li class="navbar__items">Sobre Nosotros</li>
+                </ul>
+            </div>
+            <!-- Botones de usuario y carrito -->
+            <div class="navbar__menu__buttons">
+                <!-- Botón de usuario con icono SVG -->
+                <button class="navbar__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                    </svg>
+                </button>
+                <!-- Botón del carrito con icono SVG -->
+                <button id="cart__button" class="navbar__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+
+    <main class="menu">
+        <header class="menu__header">
+            <h3>Nuestro Menu <span><i class="fa-solid fa-book-open"></i></span></h3>
+        </header>
+        <div class="filter__container">
+            <button class="filters">Todos</button>
+            <button class="filters">Pizzas</button>
+            <button class="filters">Bebidas</button>
+            <button class="filters">Postres</button>
+            <button class="filters">Complementos</button>
+            <form class="search" action="/buscar" method="get">
+                <input id="search-input" name="q" class="search__input" type="search" placeholder="Buscar..." aria-label="Buscar">
+                <button class="search__button" type="submit">
+                  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+              </form>
+              
+        </div>
+        <!-- SECCION de CARDS -->
+        <div class="cards__containers">
+            <!-- Tarjeta de producto -->
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <!-- Valoración del producto -->
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <!-- Pie de tarjeta con precio y botón de compra -->
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <!-- Repetición de la tarjeta de producto (se puede optimizar con generación dinámica) -->
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+            <div class="products__cards">
+                <img src="./img/product.png" alt="Imagen del producto Burrata">
+                <h3>Burrata</h3>
+                <p class="card__product__description">Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                <div class="stars__containers">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+                <div class="card__footer">
+                    <p class="card__product__price">$5.00</p>
+                        <button class="show__modal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button class="show__modal">
+                </div>
+            </div>
+        </div>
+
+        <section id="modal" class="modal">
+            <div class="modal__container">
+                <div class="modal__img">
+                    <img src="img/product.png" alt="Burrata">
+                </div>
+                <div class="modal__content">
+                    <div class="modal__top__content">
+                        <h5>Burrata</h5>
+                        <button class="close__modal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="modal__options">
+                        <div class="modal__option">
+                            <h5>Masa</h5>
+                            <form action="">
+                                <select name="masa" id="">
+                                    <option value="">Masa</option>
+                                </select>
+
+                            </form>
+                        </div>
+                        <div class="modal__option">
+                            <h5>Tamaño</h5>
+                            <form action="">
+                                <select name="masa" id="">
+                                    <option value="">4 Porciones</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal__description">
+                        <h5>Descripcion</h5>
+                        <p>Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico</p>
+                    </div>
+
+                    <div class="buy">
+                        <p>$5.00</p>
+                        <button>Añadir a mi orden <span><i class="fa-solid fa-cart-shopping"></i>
+                        </span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="buycart">
+            <div class="buycart__container">
+                <header class="buycart__header">
+                    <h1>Tu orden <span><i class="fa-solid fa-pizza-slice"></i></span></h1>
+                    <button class="close__sidebar">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </header>
+                <div class="buycart__content">
+                    <div class="buycart__items">
+                        <img src="img/product.png" alt="">
+                        <div  class="buycart__description">
+                            <h3>Burrata</h3>
+                            <p>
+                                Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico
+                            </p>
+                            <div class="add">
+                                <button><i class="fa-solid fa-plus"></i></button>
+                                <span>1</span>
+                                <button><i class="fa-solid fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="buycart__adm">
+                            <p>$5.00</p>
+                            <button>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="buycart__items">
+                        <img src="img/product.png" alt="">
+                        <div class="buycart__description">
+                            <h3>Burrata</h3>
+                            <p>
+                                Mozzarella, cebolla caramelizada, queso burrata, jamón, rúgula y vinagre balsámico
+                            </p>
+                            <div class="add">
+                                <button><i class="fa-solid fa-plus"></i></button>
+                                <span>1</span>
+                                <button><i class="fa-solid fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="buycart__adm">
+                            <p>$5.00</p>
+                            <button>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="buycart__price">
+                    <h3>Total</h3>
+                    <p>$10.00</p>
+                </div>
+                <button class="pay__button">
+                    Continuar con el pago
+                </button>
+                <button class="continue__nav">
+                    Seguir Navegando
+                </button>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__text">Mama Mian Pizza - Todos los derechos reservados</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/mamamianpizza" target="_blank" rel="noopener" class="footer__social-link" aria-label="Facebook">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/mamamianpizza" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <script src="https://kit.fontawesome.com/b57616fca1.js" crossorigin="anonymous"></script>
+      <script src="js/modal.js"></script>
+      <script src="js/buycart.js"></script>
+</body>
+</html>

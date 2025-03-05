@@ -1,0 +1,56 @@
+.whyus__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px 20px;
+}
+
+.whyus__header{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #991B1B;
+}
+
+.whyus__content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+.whyus__cards{
+    background-color: #991B1B;
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+.whyus__cards i {
+    font-size: 1.8rem;
+    color: #FCD6A0;
+    padding: 10px;
+}
+
+.whyus__card__title{
+    font-size: 1.8rem;
+    color: #FEB248;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.whyus__card__description{
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-align: justify;
+    padding: 10px;
+}

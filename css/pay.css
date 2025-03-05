@@ -1,0 +1,554 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: var(--bg_color);
+}
+:root{
+    --red_primario: #991B1B;
+    --bg_color:#FFFBEB;
+    --font-nav:#FFFBEB;
+}
+
+.pay{
+    display: flex;
+    height: 100%;
+    padding: 35px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative; /* Añadido para posicionamiento relativo */
+}
+
+.pay__process{
+    width: 60%;
+    flex-direction: column;
+}
+
+.steps__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step--active{
+    background-color: var(--red_primario);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FEB248;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.step--active:hover {
+    background-color: darken(var(--red_primario), 10%);
+    transform: scale(1.05);
+}
+
+.step--inactive {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #991B1B;
+    border: 1px solid #991B1B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.step--inactive:hover {
+    transform: scale(1.05);
+}
+
+.steps p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #991B1B;
+    margin-top: 10px;
+}
+
+.account__step{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #991B1B;
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.account__header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.account__header h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #991B1B;
+}
+
+.account__header p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #991B1B;
+    margin-top: 10px;
+}
+
+.account__options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.account__option{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.buy__as__guest{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #991B1B;
+    border-radius: 10px 0 0 10px;
+    width: 100%;   
+    font-size: 1.2rem;
+    color: #FEB248;
+    padding: 10px;
+    text-align: center;
+    padding: 5px;
+    gap: 5px; 
+}
+
+.buy__as__guest h5{
+    font-size: 1.2rem;
+    color: #FEB248;
+}
+
+.buy__as__guest i{
+    font-size: 1.2rem;
+    color: #FEB248;
+    margin: 5px;    
+}
+
+
+.buy__whit__account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius:0 10px 10px 0;
+    width: 100%;
+    border: 1px solid #991B1B;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+    gap: 5px;
+    color: #991B1B;
+}
+
+.buy__whit__account h5{
+    font-size: 1.2rem;
+    color: #991B1B;
+}
+
+.buy__whit__account i{
+    font-size: 1.2rem;
+    color: #991B1B;
+}
+
+.guest__form{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.guest__name{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.guest__form input{
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #991B1B;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #FFFBEB;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.account__buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+.account__button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #991B1B;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #991B1B;
+}
+
+.continue{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #991B1B;
+    background-color: #FEB248;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.pay__details{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #991B1B;
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.pay__header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.pay__header h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #991B1B;
+}
+
+.pay__header p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #991B1B;
+    margin-top: 10px;
+}
+
+.pay__form{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pay__form input{
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #991B1B;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #FFFBEB;
+}
+
+.pay__options{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pay__option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.2rem;
+    border: 1px solid #991B1B;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.pay__option_inactive{
+    background-color: #FFFBEB;
+    color: #991B1B;
+}
+
+.pay__option_active{
+    background-color: #991B1B;
+    color: #FFFFFF;
+}
+
+.card__details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #991B1B;
+}
+
+.direccion__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.Direccion__header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Direccion__header h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #991B1B;
+}
+
+.Direccion__header p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #991B1B;
+    margin-top: 10px;
+}
+
+.address__form{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.address__form input{
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #991B1B;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #FFFBEB;
+}
+
+.address__details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+.address__name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.address__details input{
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #991B1B;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #FFFBEB;
+}
+
+.buttons__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.reference__point{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.finish__pay{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #991B1B;
+    border-radius: 10px;
+    background-color: #ffffff;
+   height: 100%;
+   justify-content: space-between;
+}
+
+.finish__pay h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #991B1B;
+}
+
+.finish__pay p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #991B1B;
+    margin-top: 10px;
+}
+
+.finish__pay h2{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #991B1B;
+    margin-top: 10px;
+}
+.personal__info{
+    border-bottom: 1px solid #991B1B;
+    width: 100%;
+    padding: 5px;
+}
+
+.direction__info{
+    border-bottom: 1px solid #991B1B;
+    width: 100%;
+    padding: 5px;
+}
+
+.button__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Modificar estas clases para usar display: none/flex en lugar de la clase form__active */
+.account__step,
+.pay__details,
+.finish__pay {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #991B1B;
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.order_details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #991B1B;
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 100%;
+    justify-content: space-between;
+    align-self: flex-start;
+    margin: 165px 0 0 30px;
+    position: sticky; /* Mantener en posición */
+    top: 165px; /* Alinear con el margen superior */
+}
+
+/* Eliminar esta clase ya que ahora controlamos la visualización con JavaScript */
+.form__active{
+    display: flex;
+}
